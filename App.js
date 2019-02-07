@@ -1,34 +1,13 @@
 import React, { Component } from 'react';
-import { ScrollView, Text, View } from 'react-native';
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
-import Category from './Category';
+import { Text, View } from 'react-native';
+import {
+  createBottomTabNavigator,
+  createAppContainer,
+  createStackNavigator
+} from 'react-navigation';
+import HomeScreen from './HomeScreen';
 import Address from './Address';
-
-class HomeScreen extends Component {
-  render() {
-    return (
-      <View
-        style={{
-          flexDirection: 'column',
-          flexWrap: 'wrap',
-          alignItems: 'center'
-        }}
-      >
-        <View style={{ marginTop: 40 }}>
-          <Text>Home</Text>
-        </View>
-        <ScrollView>
-          <View style={{ marginTop: 40 }}>
-            <Address />
-          </View>
-          <View style={{ marginTop: 40 }}>
-            <Category />
-          </View>
-        </ScrollView>
-      </View>
-    );
-  }
-}
+import RestaurantLists from './RestaurantLists';
 
 class OrderListsScreen extends Component {
   render() {
